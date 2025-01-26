@@ -1,5 +1,45 @@
 # Prerequisites
 
+## Python Set up
+
+### Python Installation Guide
+
+#### Windows
+1. Download from https://www.python.org/downloads/windows/
+2. Run installer
+3. Check "Add Python to PATH"
+4. Choose installation type
+5. Verify with `python --version`
+
+#### macOS
+##### Method 1: Homebrew
+```bash
+brew install python
+```
+
+##### Method 2: Official Installer
+1. Download from https://www.python.org/downloads/macos/
+2. Run .pkg installer
+3. Follow installation wizard
+
+#### Linux
+##### Ubuntu/Debian
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+```
+
+##### Fedora
+```bash
+sudo dnf install python3 python3-pip
+```
+
+#### Verify Installation
+```bash
+python3 --version
+pip --version
+```
+
 ## Install the IDE (Integrated Development Environment)
 
 It's recommended to use [VS Code](https://code.visualstudio.com/) or feel free to use any other IDEs that you are comfortable with.
