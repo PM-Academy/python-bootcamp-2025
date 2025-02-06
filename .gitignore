@@ -1,0 +1,41 @@
+# Python related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+
+# Virtual environment
+venv/
+.env/
+*.venv
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and local files
+*.log
+*.out
+*.err
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+
+# Markdown-related
+*.md.bak
+.DS_Store
+Thumbs.db
+
+# Output files (optional)
+*.pdf
+*.html
+*.docx
