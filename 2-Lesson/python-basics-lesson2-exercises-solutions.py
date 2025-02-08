@@ -59,4 +59,72 @@ quantity = "5"
 cost = float(price) * int(quantity)
 print("Total cost: ", cost)
 
-print('---------------------')
+print('======================')
+### Exception Handling Exercises
+# 1. Safe Division
+# Create a function that safely divides two numbers
+# Handle ZeroDivisionError and TypeError
+def safe_divide(a, b):
+  try:
+    print('Division: ', a / b)
+  except ZeroDivisionError:
+    print('Divider must not be zero')
+  except TypeError:
+    print('Invalid value')
+    
+safe_divide(2, 0)
+safe_divide(2, '1')
+
+print('----------------------')
+# 2. File Reader
+# Create a function that safely reads a file
+# Handle FileNotFoundError and PermissionError
+def read_file(filename):
+  try:
+    file = open(filename)
+  except FileNotFoundError:
+    print('File not found')
+  except PermissionError:
+    print('You have not permission to access the file')
+  finally:
+    try:
+      file.close()
+      print(f'File {filename} has been closed successfully')
+    except Exception:
+      print(f'File {filename} cannot be closed')
+
+read_file('data.txt')
+print('----------------------')
+# 3. Number Input Validator
+# Create a function that gets valid integer input from user
+# Keep asking until valid input is received
+
+# 1 - approach:
+def get_valid_number1():
+  try:
+    int(input('Enter a number: '))
+    print('The entered number is valid')
+  except:
+    print('Invalid number entered')
+    get_valid_number1()
+  
+# get_valid_number1()
+print('\n')
+# 2 - approach:
+def get_valid_number2():
+  is_valid_num = False
+  while not is_valid_num:
+    num = input('Enter a number: ')
+    try:
+      int(num)
+      print('The entered number is valid')
+      is_valid_num = True
+    except:
+      print('Invalid number entered')
+
+# get_valid_number2()
+print('----------------------')
+# 4. List Index Handler
+# Create a function that safely accesses list elements
+# Handle IndexError
+def safe_get_element(lst, index):
