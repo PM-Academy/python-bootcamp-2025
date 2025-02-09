@@ -128,3 +128,4 @@ print('----------------------')
 # Create a function that safely accesses list elements
 # Handle IndexError
 def safe_get_element(lst, index):
+  pass
